@@ -13,7 +13,7 @@
 /* ------------------- Handles ------------------- */
 I2C_HandleTypeDef hi2c1;
 UART_HandleTypeDef huart1;
-
+#define ADMIN_PASS "1234"
 /* ------------------- States ------------------- */
 typedef enum {
     STATE_IDLE = 0,
@@ -293,3 +293,4 @@ static void MX_GPIO_Init(void)
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
 }
+
